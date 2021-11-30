@@ -6,6 +6,10 @@ a{
 *{
     font-family: 'Montserrat', sans-serif;
 }
+.container{
+    padding: 0 5px;
+}
+
 /* PRIMA DIVISIONE */
 .wrapper{
     display: flex;
@@ -25,13 +29,13 @@ footer{
 }
 /* SECONDA DIVISIONE */
 aside{
-    width: 70px;
+    width: 65px;
     height: 100%;
     background-color: #000;
 
 }
 #container-main{
-    width: calc(100% - 70px);
+    width: calc(100% - 65px);
     background-color:#141922 ;
 }
 header{
@@ -80,10 +84,49 @@ header{
 header .upgrade-button{
     display: inline-block;
     color: white;
-    font-size: 0.5em;
+    font-size: 0.8em;
     padding: 10px 30px;
     border-radius: 20px;
     border: 2px solid white;
+}
+/****MAIN****/
+/* navigator */
+.navigator ul{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.navigator ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px 30px 0;
+}
+li a{
+    text-decoration: none;
+    color:#7a7d81;
+}
+/* main content */
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.card{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #797979;
+    margin-bottom: 30px;
+}
+.card .card-img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.card .card-img img{
+    width: 100%;
 }
 /****FOOTER****/
 footer{
@@ -96,12 +139,12 @@ footer{
     width: 33%;
     padding: 20px 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .img-description{
     width: 40px;
     height: 40px;
+    margin-right: 20px;
 }
 .img-description img{
     width: 100%;
@@ -114,15 +157,63 @@ footer{
     display: flex;
     flex-direction: column;
     color: #797979;
+    margin-left: 20px;
 }
 /* player */
 #player{
-    background-color: slategray;
     height: 100%;
     width: 33%;
+    display: flex;
+    flex-direction: column;
 }
+.player-button{
+    font-size: 15px;
+    padding-top: 10px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-play-circle{
+    font-size: 30px;
+}
+.progress-bar{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar{
+    background-color:#797979;
+    margin:0 5px;
+    border-radius: 3px;
+}
+.progress-bar .bar{
+    height: 4px;
+    width: 140px;
+}
+.line-bar{ 
+    overflow:hidden;
+    background-color: white;
+}
+.progress-bar .bar .line-bar{
+    height: 4px;
+    width: 30px;
+}
+/* song options */
 .song-options{
-    background-color: tomato;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
     height: 100%;
     width: 33%;
+    padding-left:10px;
+}
+.song-options .bar{
+    height: 4px;
+    width: 75px;
+}
+.song-options .line-bar{
+    height: 4px;
+    width: 30px;
 }
