@@ -85,3 +85,44 @@ header .upgrade-button{
     border-radius: 20px;
     border: 2px solid white;
 }
+/****FOOTER****/
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+/*song-description*/
+.song-description{
+    height: 100%;
+    width: 33%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-description{
+    width: 40px;
+    height: 40px;
+}
+.img-description img{
+    width: 100%;
+}
+.text-description span{
+    color: #797979;
+    font-size: 0.8em;
+}
+.icon-description{
+    display: flex;
+    flex-direction: column;
+    color: #797979;
+}
+/* player */
+#player{
+    background-color: slategray;
+    height: 100%;
+    width: 33%;
+}
+.song-options{
+    background-color: tomato;
+    height: 100%;
+    width: 33%;
+}

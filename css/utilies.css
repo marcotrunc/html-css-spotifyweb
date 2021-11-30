@@ -12,3 +12,11 @@
 .txt-align{
     text-align: center;
 }
+/****LINE HEIGHT****/
+.l-height-13{
+    line-height: 13px;
+}
+/****FONT COLOR****/
+.f-color-wht{
+    color: white;
+}
