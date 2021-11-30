@@ -1,0 +1,29 @@
+/* PRIMA DIVISIONE */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.wrapper-top{
+    background-color: blue;
+    flex-grow: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    background-color: #282828;
+    height: 80px;
+}
+/* SECONDA DIVISIONE */
+aside{
+    width: 70px;
+    height: 100%;
+    background-color: #000;
+
+}
+#container-main{
+    flex-grow: 1;
+    background-color:#141922 ;
+    
+}
