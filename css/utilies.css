@@ -8,3 +8,7 @@
     content: '';
     clear: both;
 }
+/****TEXT ALIGN****/
+.txt-align{
+    text-align: center;
+}
