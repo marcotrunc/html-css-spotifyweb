@@ -5,6 +5,7 @@ a{
 }
 *{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 .container{
     padding: 0 5px;
@@ -28,13 +29,14 @@ footer{
 }
 /* SECONDA DIVISIONE */
 aside{
-    width: 65px;
+    flex-basis: 65px;
+    flex-shrink: 0;
     height: 100%;
     background-color: #000;
 
 }
 #container-main{
-    width: calc(100% - 65px);
+    flex-grow:1;
     background-color:#141922 ;
 }
 
@@ -53,10 +55,32 @@ aside{
 #aside-button-top{
     width: 100%;
     padding-top: 5px;
+    text-align: center;
 }
+.aside-button a img,
+.aside-button a .logo{
+    width: 45%;
+}
+/*playlist button display none in mobile*/
+#playlist-button{
+    display: none;
+}
+
 .aside-button a img{
     width: 45%;
 }
+.aside-button a{
+    text-decoration: none;
+    color:#797979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aside-button a span,
+.aside-button a h1{
+    display: none;
+}
+/*aside button bottom */
 #aside-button-bottom{
     display: flex;
     flex-direction: column;
@@ -71,6 +95,8 @@ aside{
     width: 20px;
     height: 20px;
 }
+
+
 /****HEADER****/
 header{
     position: fixed;
@@ -118,7 +144,7 @@ li a{
 figure{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
 }
 .card{
@@ -236,3 +262,33 @@ footer{
     height: 4px;
     width: 30px;
 }
+
+/****RESPONSIVE****/
+/* media min-width576px */
+@media  screen and (min-width: 576px) {
+    .aside-button a span,
+    .aside-button a h1{
+    display: inline-block;
+}
+    #playlist-button{
+    display: inline-block;
+    margin-top: 20px;
+}
+    aside{
+    flex-basis: 260px;
+    align-items: flex-start;
+    padding-left: 10px;
+    }
+    #aside-button-top{
+    text-align:left;   
+    }
+    .aside-button a{
+    justify-content: flex-start;  
+    }
+    .aside-button a img{
+    width: 12%;
+    }
+    .aside-button a .logo{
+    width: 20%;    
+    }
+}  

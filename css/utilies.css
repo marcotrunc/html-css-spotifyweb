@@ -36,3 +36,32 @@
 .f-color-grey{
     color: #797979;
 }
+/**** DISPLAY ****/
+.d-inl-bl{
+    display: inline-block;
+}
+.d-bl{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+/****MARGIN-BOTTOM****/
+.marg-btm-10{
+    margin-bottom: 10px;
+}
+/****PADDING****/
+.padd-left-10{
+    padding-left:10px;
+}
+
+/****SQUARE BACKGROUND****/
+.square-bk{
+    width: 45px;
+    height: 45px;
+    text-align:center;
+    line-height: 45px;
+    font-size: 25px;
+    background-color: #797979;
+    color: #000;
+}
