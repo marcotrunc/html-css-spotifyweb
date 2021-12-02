@@ -66,7 +66,11 @@ aside{
 #playlist-button{
     display: none;
 }
-
+.name-playlist{
+    height: calc(100vh - 500px);
+    width: 100%;
+    overflow-y: auto;
+}
 .aside-button a img{
     width: 45%;
 }
@@ -285,14 +289,27 @@ footer{
 .progress-bar .bar{
     height: 4px;
     width: 140px;
+    position: relative;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 30px; 
+    transform: translate(-50%,-25%);
+    opacity: 0; 
+}
+.progress-bar:hover .dot{
+    opacity: 1;
 }
 .line-bar{ 
     overflow:hidden;
     background-color: white;
 }
-.progress-bar:hover .line-bar{
-    background-color: #adff2f;
-}
+
 .progress-bar .bar .line-bar{
     height: 4px;
     width: 30px;
@@ -313,8 +330,14 @@ footer{
     height: 4px;
     width: 30px;
 }
+.progress-bar:hover .line-bar,
 .song-options:hover .line-bar{
     background-color: #adff2f;
+}
+.progress-bar:hover,
+.song-options:hover,
+footer i:hover {
+    cursor: pointer;
 }
 /****RESPONSIVE****/
 /* media min-width 576px */
@@ -328,10 +351,6 @@ footer{
     #hr-rule-side{
         display: block;
     }
-    #playlist-button{
-        overflow-y: auto;
-        z-index: 1;
-    }
     aside{
         flex-basis: 260px;
         align-items: flex-start;
@@ -339,9 +358,6 @@ footer{
     }
     #aside-button-top{
         text-align:left;   
-    }
-    #aside-button-top a:first-child{
-        margin-bottom: 20px;
     }
     .aside-button a{
         justify-content: flex-start;  
