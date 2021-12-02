@@ -8,9 +8,21 @@
     content: '';
     clear: both;
 }
+/****PADDING****/
+.padd-hr-10{
+    padding: 0 10px;
+}
 /****TEXT ALIGN****/
 .txt-align{
     text-align: center;
+}
+/****ALIGN CENTER****/
+.align-center{
+    align-items: center;
+}
+/****JUSTIFY-CONTENT****/
+.justify-end{
+    justify-content: flex-end;
 }
 /****LINE HEIGHT****/
 .l-height-13{
@@ -29,6 +41,9 @@
 .f-size-15{
     font-size: 15px;
 }
+.f-size-16{
+    font-size: 16px;
+}
 /****FONT COLOR****/
 .f-color-wht{
     color: white;
@@ -46,6 +61,13 @@
 .d-none{
     display: none;
 }
+.d-flex{
+    display: flex;
+}
+/****MARGIN****/
+.marg-vert-20{
+    margin:20px 0;
+}
 /****MARGIN-BOTTOM****/
 .marg-btm-10{
     margin-bottom: 10px;
@@ -53,6 +75,9 @@
 /****PADDING****/
 .padd-left-10{
     padding-left:10px;
+}
+.padd-top-80{
+    padding-top: 80px;
 }
 
 /****SQUARE BACKGROUND****/

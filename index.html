@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/utilies.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.ico" />
@@ -24,12 +24,20 @@
                         <img src="img/logo-small.svg" alt="spotify logo" class="logo" />
                         <h1 class="padd-left-10  f-color-wht">Spotify</h1>
                     </a>
-                    <a href="#"><img src="img/home.svg" alt="home" /><span>Home</span></a>
-                    <a href="#"><img src="img/search.svg" alt="ricerca" /><span>Cerca</span></a>
-                    <a href="#"><img src="img/libreria.svg" alt="libreria" /><span>La tua libreria</span></a>
+                    <a href="#">
+                        <img src="img/home.svg" alt="home" />
+                        <span>Home</span>
+                    </a>
+                    <a href="#"><img src="img/search.svg" alt="ricerca" />
+                        <span>Cerca</span>
+                    </a>
+                    <a href="#"><img src="img/libreria.svg" alt="libreria" />
+                        <span>La tua libreria</span>
+                    </a>
                     <div id="playlist-button">
                         <h3 class="d-bl marg-btm-10 f-color-wht">PLAYLIST</h3>
-                        <a href="#"><i class="fas fa-plus square-bk"></i>
+                        <a href="#">
+                            <i class="fas fa-plus square-bk"></i>
                             <span class="padd-left-10">Crea Playlist</span>
                         </a>
                         <a href="">Nome Playlist</a>
@@ -42,23 +50,26 @@
                     </div>
                 </div>
                 <div id="aside-button-bottom" class="aside-button txt-align">
-                    <a href="#"><img class="download" src="img/download.svg" alt=""></a>
-                    <a href="#"><img class="img-profile" src="img/profile.svg" alt=""></a>
+                    <a href="#">
+                        <img class="download" src="img/download.svg" alt="" />
+                        <span id="install-app" class="padd-left-10">Installa app</span>
+                    </a>
+                    <hr id="hr-rule-side"/>
+                    <a href="#"><img class="img-profile" src="img/profile.svg" alt="" />
+                    <span class="f-color-wht f-size-15 padd-left-10">John Doe</span>
+                    </a>
                 </div>
             </aside>
             <!-- container main -->
             <div id="container-main">
                 <!--header  -->
-                <header>
-                    <div class="container">
-                        <div class="upgrade-button">
-                            <h3>EFFETTUA L'UPGRADE</h3>
-                        </div>
-                    </div>
+                <header class="d-flex justify-end align-center">            
+                    <div class="upgrade-button">
+                        <h3>EFFETTUA L'UPGRADE</h3>
+                    </div>                
                 </header>
                 <!--main  -->
-                <main>
-                    <div class="container">
+                <main class="padd-top-80">
                         <nav class="navigator">
                             <ul class="f-size-14">
                                 <li><a href="">IN EVIDENZA</a></li>
@@ -69,10 +80,10 @@
                                 <li><a href="">SCOPRI</a></li>                            
                             </ul>
                         </nav>
-                        <div class="main-content">
+                        <div id="main-content" class="padd-hr-10">
                             <section class="recently-played">    
                                 <h2 class="f-color-wht">Recently played</h2>
-                                <figure>
+                                <article>
                                     <div class="card">
                                         <div class="card-img">
                                             <img src="img/metal_lifting.jpg" alt="album Metalica">
@@ -127,12 +138,12 @@
                                             <h5>Subtitle</h5>
                                         </div>
                                     </div>         
-                                </figure>
+                                </article>
                             </section>
                             <section class="created-for-you">
-                                <h2 class="f-color-wht">Creato per John Doe</h2>
-                                <span class="f-color-grey">Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti</span>
-                                <figure>
+                                <h2 class="f-color-wht marg-btm-10">Creato per John Doe</h2>
+                                <span class="f-color-grey ">Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti</span>
+                                <article>
                                     <div class="card">
                                         <div class="card-img">
                                             <img src="img/radar.jpeg" alt="release radar">
@@ -149,14 +160,14 @@
                                             <h3 class="f-color-wht">Daily Mix 1</h3>                                            
                                         </div>
                                     </div>             
-                                </figure>
+                                </article>
                             </section>
 
                             <section class="most-popular-artist">
-                                <h2 class="f-color-wht">Artisti più popolari</h2>
+                                <h2 class="f-color-wht marg-btm-10">Artisti più popolari</h2>
                                 <span class="f-color-grey">Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti</span>
-                                <figure>
-                                    <div class="card">
+                                <article>
+                                    <div class="card ">
                                         <div class="card-img-circle">
                                             <img src="img/youg.jpeg" alt="release radar">
                                         </div>
@@ -172,25 +183,24 @@
                                             <h3 class="f-color-wht">Ludovico Einaudi</h3>                                            
                                         </div>
                                     </div>             
-                                </figure>
+                                </article>
                             </section>
                         </div>
-                    </div>
                 </main>
             </div>
         </div>    
         <!--wrapper-bottom -->
         <footer>
             <div class="song-description">
-                <div class="img-description">
-                    <img src="img/sinister.jpeg" alt="sinister" />
+                <div class="img-description width-33 ">
+                    <img class="img-768-wdt" src="img/sinister.jpeg" alt="sinister" />
                 </div>
-                <div class="text-description l-height-13">
+                <div class="text-description l-height-13 width-33">
                     <h5 class="f-color-wht">Sinister</h5>
-                    <span>Brano</span> <br /> 
+                    <span>Brano</span> <br class="d-none" /> 
                     <span>Nome</span> 
                 </div>
-                <div class="icon-description">
+                <div class="icon-description width-33">
                     <i class="far fa-heart"></i>
                     <i class="far fa-folder"></i>
                 </div>
