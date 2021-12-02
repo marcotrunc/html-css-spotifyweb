@@ -63,7 +63,8 @@ aside{
     width: 45%;
 }
 /*playlist button display none in mobile*/
-#playlist-button{
+#playlist-button,
+.name-playlist{
     display: none;
 }
 .name-playlist{
@@ -113,6 +114,7 @@ header{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1;
     width: calc(100% - 65px);
     height: 80px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -345,6 +347,7 @@ footer i:hover {
     /* aside */
     .aside-button a span,
     .aside-button a h1,
+    .name-playlist,
     #install-app{
     display: inline-block;
     }
