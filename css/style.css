@@ -183,7 +183,6 @@ footer{
 /*song-description*/
 .song-description{
     height: 100%;
-    width: 33%;
     padding: 20px 10px;
     display: flex;
     align-items: center;
@@ -209,7 +208,6 @@ footer{
 /* player */
 #player{
     height: 100%;
-    width: 33%;
     display: flex;
     flex-direction: column;
 }
@@ -253,7 +251,6 @@ footer{
     justify-content:space-around;
     align-items: center;
     height: 100%;
-    width: 33%;
     padding-left:10px;
 }
 .song-options .bar{
@@ -360,5 +357,17 @@ footer{
     }
     .player-button .fas{
         margin: 0 20px;
+    }
+    .progress-bar .bar{
+        width: 244px;
+    }
+    .song-options{
+        justify-content: center;
+    }
+    .song-options .fas{
+        margin: 0 10px;
+    }
+    .song-options .bar{
+        width: 135px;
     }
     }

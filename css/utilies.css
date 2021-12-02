@@ -79,6 +79,9 @@
 .padd-top-80{
     padding-top: 80px;
 }
+.wdt-33{
+    width: calc(100% / 3);
+}
 
 /****SQUARE BACKGROUND****/
 .square-bk{
