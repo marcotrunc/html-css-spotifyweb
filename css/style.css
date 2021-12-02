@@ -31,7 +31,7 @@ footer{
 aside{
     flex-basis: 65px;
     flex-shrink: 0;
-    height: 100%;
+    height: calc (100% - 80px);
     background-color: #000;
 
 }
@@ -87,6 +87,7 @@ aside{
 #aside-button-bottom{
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 #aside-button-bottom .img-profile {
     background-color:#808080;
@@ -98,7 +99,9 @@ aside{
     width: 20px;
     height: 20px;
 }
-
+aside a:hover{
+    color: white;
+}
 
 /****HEADER****/
 header{
@@ -117,6 +120,11 @@ header .upgrade-button{
     border: 1px solid white;
     border-radius: 20px;
     font-size: 0.8em;
+    transition: transform 0.5s;
+}
+header .upgrade-button:hover{
+    transform: scale(1.1) ;
+    cursor: pointer;
 }
 /****MAIN****/
 /* navigator */
@@ -136,6 +144,17 @@ li a{
     text-decoration: none;
     color:#7a7d81;
 }
+.navigator li a:hover{
+    color:white;
+}
+.navigator li.active::after{
+    content: '';
+    display: block;
+    width: 35%;
+    height: 2px;
+    background-color: #adff2f;
+    margin: 0 auto;
+}
 /* main content */
 article{
     width: 100%;
@@ -153,6 +172,8 @@ article{
 }
 .card .card-img{
     margin-bottom: 10px;
+    position: relative;
+    transition: filter 1s;
 }
 .card .card-img img{
     width: 100%;
@@ -169,16 +190,35 @@ article{
     width: 100%;
     height: 230px;
     margin-bottom: 10px;
+    position: relative;
 } 
 .card .card-img-circle img{
     overflow: hidden;
     height: 100%;
     border-radius: 50%;
 }
+.card-img:hover,
+.card-img-circle:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+}
+.card-img:hover .play-hover,
+.card-img-circle:hover .play-hover{
+    opacity: 1;
+}
+.play-hover{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0 ;
+    color: white;
+}
 /****FOOTER****/
 footer{
     display: flex;
     justify-content: space-between;
+    z-index: 2;
 }
 /*song-description*/
 .song-description{
@@ -205,6 +245,11 @@ footer{
     color: #797979;
     margin-left: 20px;
 }
+.song-description span:hover,
+.song-description i:hover{
+    color: white;
+    cursor: pointer;
+}
 /* player */
 #player{
     height: 100%;
@@ -221,6 +266,10 @@ footer{
 }
 .fa-play-circle{
     font-size: 30px;
+}
+#player .fa-play-circle:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .progress-bar{
     height: 50%;
@@ -240,6 +289,9 @@ footer{
 .line-bar{ 
     overflow:hidden;
     background-color: white;
+}
+.progress-bar:hover .line-bar{
+    background-color: #adff2f;
 }
 .progress-bar .bar .line-bar{
     height: 4px;
@@ -261,7 +313,9 @@ footer{
     height: 4px;
     width: 30px;
 }
-
+.song-options:hover .line-bar{
+    background-color: #adff2f;
+}
 /****RESPONSIVE****/
 /* media min-width 576px */
 @media  screen and (min-width: 576px) {
@@ -273,6 +327,10 @@ footer{
     }
     #hr-rule-side{
         display: block;
+    }
+    #playlist-button{
+        overflow-y: auto;
+        z-index: 1;
     }
     aside{
         flex-basis: 260px;
@@ -335,12 +393,13 @@ footer{
         width: calc(100% / 3); 
     }
     .img-description{
+        width: 55px;
+        height: 55px;
         text-align: center;
-        margin-right:0;
-        height: auto;
+        margin-right:20px;
     }
     .img-description .img-768-wdt{
-        width: 70%;
+        width: 100%;
     }
     .song-description{
         justify-content: space-around;
@@ -369,5 +428,31 @@ footer{
     }
     .song-options .bar{
         width: 135px;
+    }
+    }
+    /* media min-width 992px */
+    @media screen and (min-width: 992px){
+    /* main content  */
+    .card{
+        flex-basis: calc(100% / 6);
+    }
+    /* footer  */
+    .song-description, 
+    .song-options{
+        width: 20%;
+    }
+    #player{
+        width: 60%;
+    }
+    .progress-bar .bar{
+        width: 500px;
+        height: 6px;
+        border-radius: 6px;
+    }
+    .progress-bar .bar .line-bar{
+        height: 6px;
+    }
+    .progress-bar span{
+        font-size: 13px;
     }
     }
